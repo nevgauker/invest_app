@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:invest_app/pages/signup_page.dart';
 
-class CreatePage extends StatelessWidget {
-  const CreatePage({super.key});
+class SigninPage extends StatelessWidget {
+  const SigninPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -110,13 +111,27 @@ class CreatePage extends StatelessWidget {
                     ),
                     backgroundColor: const Color(0xFF31A062),
                     foregroundColor: Colors.white),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignupPage(),
+                    ),
+                  );
+                },
                 child: const Text("Create account"),
               ),
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SigninPage(),
+                    ),
+                  );
+            },
             child: const Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: Text(

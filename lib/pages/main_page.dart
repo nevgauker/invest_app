@@ -18,7 +18,9 @@ class MainPage extends StatelessWidget {
             SizedBox(
               width: 86,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
                 child: Image.asset(
                   "assets/images/menu.png",
                   height: 24,
